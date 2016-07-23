@@ -2,6 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 
+//This is a hang man game
 int main ()
 
 {
