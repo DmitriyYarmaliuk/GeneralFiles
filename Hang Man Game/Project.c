@@ -2,7 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 
-//This is a hang man game
+//This is a hang man game that I worked on a long time ago
 int main ()
 
 {
