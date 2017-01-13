@@ -89,7 +89,7 @@ class Stepper:
 		else:
 
 		    	# Closing the opened file
-	    		print "File closed"
+#	    		print "File closed"
 		    	f.close()
 
 	def change_position(self):
@@ -98,13 +98,13 @@ class Stepper:
 		degree_val = (self.x_raw-200) * 53.5/400
 		steps = int(degree_val * 360/513)
 		
-		# Positive -- left -- backwards
-		if steps > 0:
+		# Negative -- left -- backwards
+		if steps < 0:
                         self.backwards(int(Stepper.delay) / 1000.0, abs(steps))
                         self.clear()
 
-		# Negative -- right -- forward
-		elif steps < 0:
+		# Positive -- right -- forward
+		elif steps > 0:
                         self.forward(int(Stepper.delay) / 1000.0, abs(steps))
                         self.clear()
 				
